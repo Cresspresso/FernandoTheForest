@@ -11,16 +11,18 @@ public class Player : MonoBehaviour {
 	public float mouseSensitivity = 10;
 	public Rigidbody key = null;
 	public Transform holdPos;
-	private List<Collider> nearbyHoldables = new List<Collider>();
-
 	public Transform head;
+	[Range(1, 2)]
+	public int playerNumber = 1;
+
+	private List<Collider> nearbyHoldables = new List<Collider>();
 
 	private void Update()
 	{
-		eulerAngles.x = Mathf.Clamp(eulerAngles.x + mouseSensitivity * -Input.GetAxis("Mouse Y"), -89.9f, 89.9f);
-		eulerAngles.y = Mathf.Repeat(eulerAngles.y + mouseSensitivity * Input.GetAxis("Mouse X"), 360.0f);
+		eulerAngles.x = Mathf.Clamp(eulerAngles.x + mouseSensitivity * -Input.GetAxis("Mouse Y-" + playerNumber), -89.9f, 89.9f);
+		eulerAngles.y = Mathf.Repeat(eulerAngles.y + mouseSensitivity * Input.GetAxis("Mouse X-" + playerNumber), 360.0f);
 
-		if (Input.GetButtonDown("Fire1"))
+		if (Input.GetButtonDown("Fire1-" + playerNumber))
 		{
 			if (key)
 			{
@@ -67,7 +69,7 @@ public class Player : MonoBehaviour {
 
 	private void FixedUpdate()
 	{
-		cc.SimpleMove(transform.rotation * (speed * new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"))));
+		cc.SimpleMove(transform.rotation * (speed * new Vector3(Input.GetAxis("Horizontal-" + playerNumber), 0, Input.GetAxis("Vertical-"+ playerNumber))));
 
 		head.transform.localEulerAngles = new Vector3(eulerAngles.x, 0, 0);
 		transform.localEulerAngles = new Vector3(0, eulerAngles.y, 0);
