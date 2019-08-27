@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Key : MonoBehaviour {
 
-	private void OnCollisionEnter(Collision collision)
+	public void OnCollisionEnter(Collision collision)
 	{
 		var door = collision.collider.GetComponentInParent<Door>();
 		if (door != null)
