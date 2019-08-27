@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Player : MonoBehaviour {
 
@@ -8,6 +9,9 @@ public class Player : MonoBehaviour {
 	public float speed = 10;
 	public Vector3 eulerAngles = Vector3.zero;
 	public float mouseSensitivity = 10;
+	public Rigidbody key = null;
+	public Transform holdPos;
+	private List<Collider> nearbyHoldables = new List<Collider>();
 
 	public Transform head;
 
@@ -17,6 +21,50 @@ public class Player : MonoBehaviour {
         { Application.Quit(); };
 		eulerAngles.x = Mathf.Clamp(eulerAngles.x + mouseSensitivity * -Input.GetAxis("Mouse Y"), -89.9f, 89.9f);
 		eulerAngles.y = Mathf.Repeat(eulerAngles.y + mouseSensitivity * Input.GetAxis("Mouse X"), 360.0f);
+
+		if (Input.GetButtonDown("Fire1"))
+		{
+			if (key)
+			{
+				Drop();
+			}
+			else
+			{
+				var holdable = nearbyHoldables.FirstOrDefault(x => x.GetComponent<Key>() != null);
+				if (holdable)
+				{
+					Hold(holdable.GetComponent<Rigidbody>());
+				}
+			}
+		}
+	}
+
+	public void Hold(Rigidbody rb)
+	{
+		key = rb;
+		key.isKinematic = true;
+	}
+
+	public Rigidbody Drop()
+	{
+		key.isKinematic = false;
+		var old = key;
+		key = null;
+		return old;
+	}
+
+	private void OnTriggerEnter(Collider other)
+	{
+		var key = other.GetComponentInParent<Key>();
+		if (key != null)
+		{
+			nearbyHoldables.Add(other);
+		}
+	}
+
+	private void OnTriggerExit(Collider other)
+	{
+		nearbyHoldables.Remove(other);
 	}
 
 	private void FixedUpdate()
@@ -25,5 +73,11 @@ public class Player : MonoBehaviour {
 
 		head.transform.localEulerAngles = new Vector3(eulerAngles.x, 0, 0);
 		transform.localEulerAngles = new Vector3(0, eulerAngles.y, 0);
+
+		if (key)
+		{
+			key.MovePosition(holdPos.position);
+			key.MoveRotation(holdPos.rotation);
+		}
 	}
 }
