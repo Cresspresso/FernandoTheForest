@@ -13,6 +13,8 @@ public class Player : MonoBehaviour {
 
 	private void Update()
 	{
+        if(Input.GetKey("escape"))
+        { Application.Quit(); };
 		eulerAngles.x = Mathf.Clamp(eulerAngles.x + mouseSensitivity * -Input.GetAxis("Mouse Y"), -89.9f, 89.9f);
 		eulerAngles.y = Mathf.Repeat(eulerAngles.y + mouseSensitivity * Input.GetAxis("Mouse X"), 360.0f);
 	}
