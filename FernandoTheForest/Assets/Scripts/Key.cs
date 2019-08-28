@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Key : Holdable {
-	
+
+	public int keyNumber = 1;
+
 	public void OnCollisionEnter(Collision collision)
 	{
 		var door = collision.collider.GetComponentInParent<Door>();
-		if (door != null)
+		if (door != null && door.keyNumberMask.Contains(keyNumber))
 		{
 			door.Unlock();
 			Destroy(gameObject);

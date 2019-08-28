@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Door : MonoBehaviour {
 
+	public int[] keyNumberMask = new int[1] { 1 };
+
 	public bool isLocked = true;
     Game_Loop m_Game_Loop;
 
