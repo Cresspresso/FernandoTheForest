@@ -225,7 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4659900827290116}
   m_Layer: 0
-  m_Name: HutPrefImproved
+  m_Name: HutPrefImproved (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
