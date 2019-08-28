@@ -8,6 +8,7 @@ ModelImporter:
     400000: //RootNode
     400002: TableChairs
     2100000: initialShadingGroup
+    2100002: TableChairsMat
     2300000: TableChairs
     3300000: TableChairs
     4300000: TableChairs
