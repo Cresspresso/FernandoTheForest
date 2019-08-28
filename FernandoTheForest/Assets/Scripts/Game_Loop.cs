@@ -12,7 +12,7 @@ public class Game_Loop : MonoBehaviour {
 
     public int iPlayer = 0;
     public int TimeBonus = 0;
-    public float iTime = 0;
+    public float iTime = 1;
 
     public Text TimeText;
     public Text P1Score;
@@ -79,6 +79,11 @@ public class Game_Loop : MonoBehaviour {
             P4Score.text = " ";
         }
         */
+
+        if ( iTime <= 0 )
+        {
+            Application.Quit();
+        }
     }
 
     public void ScoreBoard()
