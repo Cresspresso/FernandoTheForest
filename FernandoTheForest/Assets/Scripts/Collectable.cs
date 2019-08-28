@@ -13,6 +13,7 @@ public class Collectable : Holdable
     //}
 
     public Game_Loop m_Game_Loop;
+    public GameObject Trophy;
 
 	public override void OnHeldBy(Player player)
 	{
@@ -25,8 +26,13 @@ public class Collectable : Holdable
 		playerHoldingSelf.points += points;
 
         m_Game_Loop = GameObject.FindObjectOfType(typeof(Game_Loop)) as Game_Loop;
-        m_Game_Loop.Trophy();
-        m_Game_Loop.ScoreBoard();
+        if (Trophy.name == "Trophy")
+        {
+            m_Game_Loop.Trophy();
+            m_Game_Loop.ScoreBoard();
+        }
+        else
+        { m_Game_Loop.Collectable(); }
 
 		base.OnDropped();
 		Destroy(gameObject);
