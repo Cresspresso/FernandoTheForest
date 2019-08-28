@@ -8,6 +8,7 @@ ModelImporter:
     400000: Chair
     400002: //RootNode
     2100000: initialShadingGroup
+    2100002: ChairMat
     2300000: Chair
     3300000: Chair
     4300000: Chair

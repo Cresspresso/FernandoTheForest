@@ -8,6 +8,7 @@ ModelImporter:
     400000: //RootNode
     400002: pTorus1
     2100000: initialShadingGroup
+    2100002: pTorus1Mat
     2300000: pTorus1
     3300000: pTorus1
     4300000: pTorus1
