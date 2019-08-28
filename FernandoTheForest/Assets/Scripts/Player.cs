@@ -12,8 +12,9 @@ public class Player : MonoBehaviour {
 	public Holdable keyBeingHeld = null;
 	public Transform holdPos;
 	public Transform head;
-	[Range(1, 2)]
-	public int playerNumber = 1;
+	public Camera cam;
+	public Renderer rend;
+	public int playerNumber;
 
 	public float points = 0;
 
