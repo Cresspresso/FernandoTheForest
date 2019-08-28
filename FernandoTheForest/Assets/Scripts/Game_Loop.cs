@@ -15,21 +15,70 @@ public class Game_Loop : MonoBehaviour {
     public float iTime = 0;
 
     public Text TimeText;
+    public Text P1Score;
+    public Text P2Score;
+    public Text P3Score;
+    public Text P4Score;
 
     // Use this for initialization
     void Start () {
         iTime = 240;
+        P1Score.text = " ";
+        P2Score.text = " ";
+        P3Score.text = " ";
+        P4Score.text = " ";
 	}
 	
 	// Update is called once per frame
 	void Update () {
         iTime = iTime - Time.deltaTime;
-        float fTime = iTime / 100;
-        string sTime = string.Format("{0:N2}", fTime);
-        TimeText.text = sTime;
+        if (iTime > 0)
+        {
+            TimeText.text = string.Format("{0:N2}", iTime/100);
+        }
+        else
+        {
+            TimeText.text = "0";
+        }
 	}
 
-    void TimetoPoints ()
+    public void ScoreBoard()
+    {
+        if (Score_P1 > 0)
+        {
+        P1Score.text = "Player 1: " + string.Format("{0}", Score_P1);
+        }
+        else
+        {
+            P1Score.text = " ";
+        }
+        if (Score_P2 > 0)
+        {
+            P2Score.text = "Player 2: " + string.Format("{0}", Score_P2);
+        }
+        else
+        {
+            P2Score.text = " ";
+        }
+        if (Score_P3 > 0)
+        {
+            P3Score.text = "Player 3: " + string.Format("{0}", Score_P3);
+        }
+        else
+        {
+            P3Score.text = " ";
+        }
+        if (Score_P4 > 0)
+        {
+            P4Score.text = "Player 4: " + string.Format("{0}", Score_P4);
+        }
+        else
+        {
+            P4Score.text = " ";
+        }
+    }
+
+    public void TimetoPoints ()
     {
         if (iTime >= 180)
         {
@@ -70,7 +119,7 @@ public class Game_Loop : MonoBehaviour {
         }
     }
 
-    void Collectable ()
+    public void Collectable ()
     {
         if (iPlayer == 0)
         {
@@ -90,7 +139,7 @@ public class Game_Loop : MonoBehaviour {
         }
     }
 
-    void Trophy () {
+    public void Trophy () {
         if (iPlayer == 0)
         {
             Score_P1 = Score_P1 + 500;
