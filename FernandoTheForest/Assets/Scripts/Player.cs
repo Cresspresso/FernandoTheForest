@@ -9,11 +9,13 @@ public class Player : MonoBehaviour {
 	public float speed = 10;
 	public Vector3 eulerAngles = Vector3.zero;
 	public float mouseSensitivity = 10;
-	public Rigidbody key = null;
+	public Holdable keyBeingHeld = null;
 	public Transform holdPos;
 	public Transform head;
 	[Range(1, 2)]
 	public int playerNumber = 1;
+
+	public float points = 0;
 
 	private List<Collider> nearbyHoldables = new List<Collider>();
 
@@ -25,40 +27,53 @@ public class Player : MonoBehaviour {
 		eulerAngles.x = Mathf.Clamp(eulerAngles.x + mouseSensitivity * -Input.GetAxis("Mouse Y-" + playerNumber), -89.9f, 89.9f);
 		eulerAngles.y = Mathf.Repeat(eulerAngles.y + mouseSensitivity * Input.GetAxis("Mouse X-" + playerNumber), 360.0f);
 
+		nearbyHoldables.RemoveAll(x => x == null || x.GetComponent<Holdable>() == null);
+
 		if (Input.GetButtonDown("Fire1-" + playerNumber))
 		{
-			if (key)
+			if (keyBeingHeld)
 			{
 				Drop();
 			}
 			else
 			{
-				var holdable = nearbyHoldables.FirstOrDefault(x => x.GetComponent<Key>() != null);
-				if (holdable)
+				var key = nearbyHoldables.Select(x => x.GetComponent<Holdable>()).FirstOrDefault();
+				if (key)
 				{
-					Hold(holdable.GetComponent<Rigidbody>());
+					Hold(key);
 				}
 			}
 		}
 	}
 
-	public void Hold(Rigidbody rb)
+	public void Hold(Holdable key)
 	{
-		key = rb;
-		key.isKinematic = true;
+		this.keyBeingHeld = key;
+		key.rb.isKinematic = true;
+		key.OnHeldBy(this);
 	}
 
-	public Rigidbody Drop()
+	public Holdable Drop()
 	{
-		key.isKinematic = false;
-		var old = key;
-		key = null;
-		return old;
+		if (keyBeingHeld)
+		{
+			keyBeingHeld.OnDropped();
+			keyBeingHeld.rb.isKinematic = false;
+			var key = keyBeingHeld;
+			keyBeingHeld = null;
+			return key;
+		}
+		return null;
+	}
+
+	private void OnDestroy()
+	{
+		Drop();
 	}
 
 	private void OnTriggerEnter(Collider other)
 	{
-		var key = other.GetComponentInParent<Key>();
+		var key = other.GetComponentInParent<Holdable>();
 		if (key != null)
 		{
 			nearbyHoldables.Add(other);
@@ -76,11 +91,5 @@ public class Player : MonoBehaviour {
 
 		head.transform.localEulerAngles = new Vector3(eulerAngles.x, 0, 0);
 		transform.localEulerAngles = new Vector3(0, eulerAngles.y, 0);
-
-		if (key)
-		{
-			key.MovePosition(holdPos.position);
-			key.MoveRotation(holdPos.rotation);
-		}
 	}
 }
