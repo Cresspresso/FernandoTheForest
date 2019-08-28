@@ -15,6 +15,7 @@ public class Player : MonoBehaviour {
 	public Camera cam;
 	public Renderer rend;
 	public int playerNumber;
+	public int inputControllerNumber;
 
 	public float points = 0;
 
@@ -25,12 +26,12 @@ public class Player : MonoBehaviour {
 		if(Input.GetKey("escape"))
         { Application.Quit(); };
 		
-		eulerAngles.x = Mathf.Clamp(eulerAngles.x + mouseSensitivity * -Input.GetAxis("Mouse Y-" + playerNumber), -89.9f, 89.9f);
-		eulerAngles.y = Mathf.Repeat(eulerAngles.y + mouseSensitivity * Input.GetAxis("Mouse X-" + playerNumber), 360.0f);
+		eulerAngles.x = Mathf.Clamp(eulerAngles.x + mouseSensitivity * -Input.GetAxis("Mouse Y-" + inputControllerNumber), -89.9f, 89.9f);
+		eulerAngles.y = Mathf.Repeat(eulerAngles.y + mouseSensitivity * Input.GetAxis("Mouse X-" + inputControllerNumber), 360.0f);
 
 		nearbyHoldables.RemoveAll(x => x == null || x.GetComponent<Holdable>() == null);
 
-		if (Input.GetButtonDown("Fire1-" + playerNumber))
+		if (Input.GetButtonDown("Fire1-" + inputControllerNumber))
 		{
 			if (keyBeingHeld)
 			{
@@ -88,7 +89,7 @@ public class Player : MonoBehaviour {
 
 	private void FixedUpdate()
 	{
-		cc.SimpleMove(transform.rotation * (speed * new Vector3(Input.GetAxis("Horizontal-" + playerNumber), 0, Input.GetAxis("Vertical-"+ playerNumber))));
+		cc.SimpleMove(transform.rotation * (speed * new Vector3(Input.GetAxis("Horizontal-" + inputControllerNumber), 0, Input.GetAxis("Vertical-"+ inputControllerNumber))));
 
 		head.transform.localEulerAngles = new Vector3(eulerAngles.x, 0, 0);
 		transform.localEulerAngles = new Vector3(0, eulerAngles.y, 0);
