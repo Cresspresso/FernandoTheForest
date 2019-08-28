@@ -9,10 +9,11 @@ public class PlayerSpawner : MonoBehaviour
 	[System.Serializable]
 	public class PlayerInstanceData
 	{
+		public int playerNumber;
+		public int inputControllerNumber;
 		public Transform spawnPoint;
 		public Rect cameraRect = new Rect(0, 0, 0.5f, 0.5f);
 		public Material material;
-		public int playerNumber;
 
 		public Player spawnedPlayer = null;
 	}
@@ -44,6 +45,7 @@ public class PlayerSpawner : MonoBehaviour
 			{
 				var player = Instantiate(prefab, transform, true);
 				player.playerNumber = data.playerNumber;
+				player.inputControllerNumber = data.inputControllerNumber;
 				player.name = "Player-" + data.playerNumber;
 				player.transform.position = data.spawnPoint.position;
 				player.transform.rotation = data.spawnPoint.rotation;
@@ -51,6 +53,19 @@ public class PlayerSpawner : MonoBehaviour
 				player.rend.material = data.material;
 				data.spawnedPlayer = player;
 			}
+		}
+	}
+	
+	private void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.BackQuote))
+		{
+			var last = playerInstances[playerInstances.Length - 1].spawnedPlayer.inputControllerNumber;
+			for (int i = playerInstances.Length - 1; i > 0; i--)
+			{
+				playerInstances[i].spawnedPlayer.inputControllerNumber = playerInstances[i - 1].spawnedPlayer.inputControllerNumber;
+			}
+			playerInstances[0].spawnedPlayer.inputControllerNumber = last;
 		}
 	}
 }

@@ -169,7 +169,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 114282103326971330, guid: 9c4e82eab9cd3f64a9a592360edca93a, type: 2}
   playerInstances:
-  - spawnPoint: {fileID: 4727513563576222}
+  - playerNumber: 1
+    inputControllerNumber: 1
+    spawnPoint: {fileID: 4727513563576222}
     cameraRect:
       serializedVersion: 2
       x: 0
@@ -177,9 +179,10 @@ MonoBehaviour:
       width: 0.5
       height: 0.5
     material: {fileID: 2100000, guid: 24a072f075f8a5048b4e3f0bb8e1fa4f, type: 2}
-    playerNumber: 1
     spawnedPlayer: {fileID: 0}
-  - spawnPoint: {fileID: 4657019155942844}
+  - playerNumber: 2
+    inputControllerNumber: 2
+    spawnPoint: {fileID: 4657019155942844}
     cameraRect:
       serializedVersion: 2
       x: 0.5
@@ -187,9 +190,10 @@ MonoBehaviour:
       width: 0.5
       height: 0.5
     material: {fileID: 2100000, guid: 010a09959680f7245b32004107d5b0f8, type: 2}
-    playerNumber: 2
     spawnedPlayer: {fileID: 0}
-  - spawnPoint: {fileID: 4827316838699368}
+  - playerNumber: 3
+    inputControllerNumber: 3
+    spawnPoint: {fileID: 4827316838699368}
     cameraRect:
       serializedVersion: 2
       x: 0
@@ -197,9 +201,10 @@ MonoBehaviour:
       width: 0.5
       height: 0.5
     material: {fileID: 2100000, guid: f345a1eb216e6ab4dac0d9dd9cb79be0, type: 2}
-    playerNumber: 3
     spawnedPlayer: {fileID: 0}
-  - spawnPoint: {fileID: 4013407123730124}
+  - playerNumber: 4
+    inputControllerNumber: 4
+    spawnPoint: {fileID: 4013407123730124}
     cameraRect:
       serializedVersion: 2
       x: 0.5
@@ -207,5 +212,4 @@ MonoBehaviour:
       width: 0.5
       height: 0.5
     material: {fileID: 2100000, guid: 1285ebf6ff2fe5d46b4d86c5169a7c88, type: 2}
-    playerNumber: 4
     spawnedPlayer: {fileID: 0}
