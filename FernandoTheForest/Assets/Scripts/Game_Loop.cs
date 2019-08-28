@@ -12,7 +12,7 @@ public class Game_Loop : MonoBehaviour {
 
     public int iPlayer = 0;
     public int TimeBonus = 0;
-    public float iTime = 0;
+    public float iTime = 1;
 
     public Text TimeText;
     public Text P1Score;
@@ -22,7 +22,7 @@ public class Game_Loop : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        iTime = 240;
+        iTime = 120;
         P1Score.text = " ";
         P2Score.text = " ";
         P3Score.text = " ";
@@ -32,9 +32,11 @@ public class Game_Loop : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         iTime = iTime - Time.deltaTime;
+        string minutes = Mathf.Floor(iTime / 60).ToString("0");
+        string seconds = (iTime % 60).ToString("00");
         if (iTime > 0)
         {
-            TimeText.text = string.Format("{0:N2}", iTime/100);
+            TimeText.text = string.Format("{0}:{1}", minutes, seconds);
         }
         else
         {
@@ -79,6 +81,11 @@ public class Game_Loop : MonoBehaviour {
             P4Score.text = " ";
         }
         */
+
+        if ( iTime <= 0 )
+        {
+            Application.Quit();
+        }
     }
 
     public void ScoreBoard()
@@ -88,19 +95,19 @@ public class Game_Loop : MonoBehaviour {
 
     public void TimetoPoints ()
     {
-        if (iTime >= 180)
+        if (iTime >= 96)
         {
             TimeBonus = 500;
         }
-        else if (iTime >= 150)
+        else if (iTime >= 72)
         {
             TimeBonus = 400;
         }
-        else if (iTime >= 120)
+        else if (iTime >= 48)
         {
             TimeBonus = 300;
         }
-        else if (iTime >= 60)
+        else if (iTime >= 24)
         {
             TimeBonus = 200;
         }

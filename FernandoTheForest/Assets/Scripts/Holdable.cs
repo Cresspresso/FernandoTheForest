@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Holdable : MonoBehaviour {
 
+	// only players whose number is found in this mask can hold this object.
+	public int[] playerNumberMask = new int[1] { 1 };
+
 	public Rigidbody rb { get { return GetComponent<Rigidbody>(); } }
 	public Player playerHoldingSelf;
 	public bool isBeingHeld { get { return playerHoldingSelf != null; } }
