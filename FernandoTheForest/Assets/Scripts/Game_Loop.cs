@@ -40,13 +40,15 @@ public class Game_Loop : MonoBehaviour {
         {
             TimeText.text = "0";
         }
-	}
 
-    public void ScoreBoard()
-    {
+        P1Score.text = "Player 1: " + string.Format("{0}", Score_P1);
+        P2Score.text = "Player 2: " + string.Format("{0}", Score_P2);
+        P3Score.text = "Player 3: " + string.Format("{0}", Score_P3);
+        P4Score.text = "Player 4: " + string.Format("{0}", Score_P4);
+        /*
         if (Score_P1 > 0)
         {
-        P1Score.text = "Player 1: " + string.Format("{0}", Score_P1);
+            P1Score.text = "Player 1: " + string.Format("{0}", Score_P1);
         }
         else
         {
@@ -76,6 +78,12 @@ public class Game_Loop : MonoBehaviour {
         {
             P4Score.text = " ";
         }
+        */
+    }
+
+    public void ScoreBoard()
+    {
+        
     }
 
     public void TimetoPoints ()
