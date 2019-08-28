@@ -12,6 +12,7 @@ public class Player : MonoBehaviour {
 	public Holdable keyBeingHeld = null;
 	public Transform holdPos;
 	public Transform head;
+	public Transform camFollowPos;
 	public Camera cam;
 	public Renderer rend;
 	public int playerNumber;
@@ -29,7 +30,7 @@ public class Player : MonoBehaviour {
 		eulerAngles.x = Mathf.Clamp(eulerAngles.x + mouseSensitivity * -Input.GetAxis("Mouse Y-" + inputControllerNumber), -89.9f, 89.9f);
 		eulerAngles.y = Mathf.Repeat(eulerAngles.y + mouseSensitivity * Input.GetAxis("Mouse X-" + inputControllerNumber), 360.0f);
 
-		nearbyHoldables.RemoveAll(x => x == null || x.GetComponent<Holdable>() == null);
+		nearbyHoldables.RemoveAll(x => x == null);
 
 		if (Input.GetButtonDown("Fire1-" + inputControllerNumber))
 		{
@@ -39,7 +40,10 @@ public class Player : MonoBehaviour {
 			}
 			else
 			{
-				var key = nearbyHoldables.Select(x => x.GetComponent<Holdable>()).FirstOrDefault();
+				var key = nearbyHoldables
+					.Select(x => x.GetComponent<Holdable>())
+					.Where(x => x != null && x.playerNumberMask.Contains(this.playerNumber))
+					.FirstOrDefault();
 				if (key)
 				{
 					Hold(key);
@@ -53,6 +57,11 @@ public class Player : MonoBehaviour {
 		this.keyBeingHeld = key;
 		key.rb.isKinematic = true;
 		key.OnHeldBy(this);
+
+		foreach (var c in key.GetComponentsInChildren<Collider>())
+		{
+			Physics.IgnoreCollision(cc, c);
+		}
 	}
 
 	public Holdable Drop()
@@ -61,6 +70,12 @@ public class Player : MonoBehaviour {
 		{
 			keyBeingHeld.OnDropped();
 			keyBeingHeld.rb.isKinematic = false;
+
+			foreach (var c in keyBeingHeld.GetComponentsInChildren<Collider>())
+			{
+				Physics.IgnoreCollision(cc, c, false);
+			}
+
 			var key = keyBeingHeld;
 			keyBeingHeld = null;
 			return key;
