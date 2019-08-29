@@ -9,76 +9,76 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1241989958183390}
+  m_RootGameObject: {fileID: 1705736685229376}
   m_IsPrefabAsset: 1
---- !u!1 &1162494040815448
+--- !u!1 &1705736685229376
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4951749385688458}
-  - component: {fileID: 33896134678534686}
-  - component: {fileID: 23189756688131774}
+  - component: {fileID: 4853454656823888}
+  - component: {fileID: 114484292634660228}
+  - component: {fileID: 54391912542654232}
   m_Layer: 0
-  m_Name: troply
+  m_Name: MushroomSpeedPowerup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1241989958183390
+--- !u!1 &1997265774203974
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4007905036084506}
-  - component: {fileID: 135321100772274472}
-  - component: {fileID: 54595587025879576}
-  - component: {fileID: 114475519985743550}
+  - component: {fileID: 4631599826467774}
+  - component: {fileID: 33267966952552726}
+  - component: {fileID: 23879761103977420}
+  - component: {fileID: 65731705560313496}
   m_Layer: 0
-  m_Name: Trophy
+  m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4007905036084506
+--- !u!4 &4631599826467774
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1241989958183390}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -13.48, z: 16.68}
+  m_GameObject: {fileID: 1997265774203974}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4853454656823888}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4853454656823888
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1705736685229376}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.8563843, y: -15.002747, z: -4.7236176}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4951749385688458}
+  - {fileID: 4631599826467774}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4951749385688458
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1162494040815448}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.2, z: 0}
-  m_LocalScale: {x: 1, y: 0.22072534, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4007905036084506}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23189756688131774
+--- !u!23 &23879761103977420
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1162494040815448}
+  m_GameObject: {fileID: 1997265774203974}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -88,7 +88,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 6623882b1f2f7264bb95f44005ef9b29, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -108,19 +108,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33896134678534686
+--- !u!33 &33267966952552726
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1162494040815448}
-  m_Mesh: {fileID: 4300000, guid: 5e2bb7bc968e88242a81bc67d76b1dde, type: 3}
---- !u!54 &54595587025879576
+  m_GameObject: {fileID: 1997265774203974}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54391912542654232
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1241989958183390}
+  m_GameObject: {fileID: 1705736685229376}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -128,33 +128,31 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &114475519985743550
-MonoBehaviour:
+--- !u!65 &65731705560313496
+BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1241989958183390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 750080141f1b20b47965e493a66fc3c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerNumberMask: 01000000020000000300000004000000
-  playerHoldingSelf: {fileID: 0}
-  points: 1000
-  m_Game_Loop: {fileID: 0}
-  trophy: {fileID: 0}
---- !u!135 &135321100772274472
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1241989958183390}
+  m_GameObject: {fileID: 1997265774203974}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114484292634660228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1705736685229376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f8e59e44b340174b8b5a3f29ae0c7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNumberMask: 01000000
+  playerHoldingSelf: {fileID: 0}
+  speedBonusTime: 10

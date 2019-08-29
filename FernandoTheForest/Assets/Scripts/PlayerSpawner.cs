@@ -50,6 +50,7 @@ public class PlayerSpawner : MonoBehaviour
 				player.transform.position = data.spawnPoint.position;
 				player.transform.rotation = data.spawnPoint.rotation;
 				player.cam.rect = data.cameraRect;
+				player.activeWhenWallHacks.rect = data.cameraRect;
 				player.rend.material = data.material;
 				data.spawnedPlayer = player;
 			}

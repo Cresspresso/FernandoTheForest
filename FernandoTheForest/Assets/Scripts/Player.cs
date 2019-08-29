@@ -6,7 +6,8 @@ using System.Linq;
 public class Player : MonoBehaviour {
 
 	public CharacterController cc { get { return GetComponent<CharacterController>(); } }
-	public float speed = 10;
+	public float normalSpeed = 10;
+	public float boostedSpeed = 20;
 	public Vector3 eulerAngles = Vector3.zero;
 	public float mouseSensitivity = 10;
 	public Holdable keyBeingHeld = null;
@@ -17,14 +18,47 @@ public class Player : MonoBehaviour {
 	public Renderer rend;
 	public int playerNumber;
 	public int inputControllerNumber;
+	public float speedBonusTimer = 0;
+	public float wallHacksTimer = 0;
+	public Camera activeWhenWallHacks;
+	public GameObject playerModel;
 
 	public float points = 0;
 
 	private List<Collider> nearbyHoldables = new List<Collider>();
 
+	private void Start()
+	{
+		activeWhenWallHacks.gameObject.SetActive(false);
+
+		playerModel.layer = LayerMask.NameToLayer("WallHacks-" + playerNumber);
+		activeWhenWallHacks.cullingMask = LayerMask.GetMask("WallHacks-" + playerNumber);
+	}
+
 	private void Update()
 	{
-		if(Input.GetKey("escape"))
+		if (speedBonusTimer > 0)
+		{
+			speedBonusTimer -= Time.deltaTime;
+			if (speedBonusTimer <= 0)
+			{
+				speedBonusTimer = 0;
+			}
+		}
+
+		if (wallHacksTimer > 0)
+		{
+			wallHacksTimer -= Time.deltaTime;
+			if (wallHacksTimer < 0)
+			{
+				wallHacksTimer = 0;
+			}
+		}
+
+		activeWhenWallHacks.gameObject.SetActive(wallHacksTimer > 0);
+
+
+		if (Input.GetKey("escape"))
         { Application.Quit(); };
 		
 		eulerAngles.x = Mathf.Clamp(eulerAngles.x + mouseSensitivity * -Input.GetAxis("Mouse Y-" + inputControllerNumber), -89.9f, 89.9f);
@@ -41,7 +75,7 @@ public class Player : MonoBehaviour {
 			else
 			{
 				var key = nearbyHoldables
-					.Select(x => x.GetComponent<Holdable>())
+					.Select(x => x.GetComponentInParent<Holdable>())
 					.Where(x => x != null && x.playerNumberMask.Contains(this.playerNumber))
 					.FirstOrDefault();
 				if (key)
@@ -104,6 +138,7 @@ public class Player : MonoBehaviour {
 
 	private void FixedUpdate()
 	{
+		float speed = speedBonusTimer > 0 ? boostedSpeed : normalSpeed;
 		cc.SimpleMove(transform.rotation * (speed * new Vector3(Input.GetAxis("Horizontal-" + inputControllerNumber), 0, Input.GetAxis("Vertical-"+ inputControllerNumber))));
 
 		head.transform.localEulerAngles = new Vector3(eulerAngles.x, 0, 0);

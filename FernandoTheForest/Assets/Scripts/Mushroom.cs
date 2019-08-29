@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collectable : Holdable
-{
+public class Mushroom : Collectable {
+
+	public float speedBonusTime = 10;
+
 	public override void OnHeldBy(Player player)
 	{
 		base.OnHeldBy(player);
-		player.Drop();
-	}
-
-	public override void OnDropped()
-	{
-		base.OnDropped();
-		Destroy(gameObject);
+		player.speedBonusTimer = speedBonusTime; // reset timer for seconds
 	}
 }
