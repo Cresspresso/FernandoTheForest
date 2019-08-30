@@ -149,7 +149,12 @@ public class Player : MonoBehaviour {
 	private void FixedUpdate()
 	{
 		float speed = speedBonusTimer > 0 ? boostedSpeed : normalSpeed;
-		cc.SimpleMove(transform.rotation * (speed * new Vector3(Input.GetAxis("Horizontal-" + inputControllerNumber), 0, Input.GetAxis("Vertical-"+ inputControllerNumber))));
+		var v = speed * new Vector3(
+			Input.GetAxis("Horizontal-" + inputControllerNumber),
+			0,
+			Input.GetAxis("Vertical-" + inputControllerNumber)
+			);
+		cc.SimpleMove(transform.rotation * (v + Physics.gravity * Time.fixedDeltaTime));
 
 		head.transform.localEulerAngles = new Vector3(eulerAngles.x, 0, 0);
 		transform.localEulerAngles = new Vector3(0, eulerAngles.y, 0);
