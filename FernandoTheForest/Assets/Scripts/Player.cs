@@ -19,6 +19,7 @@ public class Player : MonoBehaviour {
 	public int playerNumber;
 	public int inputControllerNumber;
 	public float speedBonusTimer = 0;
+	public ParticleSystem speedEffects;
 	public float wallHacksTimer = 0;
 	public Camera activeWhenWallHacks;
 	public GameObject playerModel;
@@ -33,6 +34,14 @@ public class Player : MonoBehaviour {
 
 		playerModel.layer = LayerMask.NameToLayer("WallHacks-" + playerNumber);
 		activeWhenWallHacks.cullingMask = LayerMask.GetMask("WallHacks-" + playerNumber);
+
+		speedEffects.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+	}
+
+	public void GiveSpeedBoost(float time)
+	{
+		speedBonusTimer = time;
+		speedEffects.Play(true);
 	}
 
 	private void Update()
@@ -43,6 +52,7 @@ public class Player : MonoBehaviour {
 			if (speedBonusTimer <= 0)
 			{
 				speedBonusTimer = 0;
+				speedEffects.Stop(true, ParticleSystemStopBehavior.StopEmitting);
 			}
 		}
 
@@ -139,7 +149,12 @@ public class Player : MonoBehaviour {
 	private void FixedUpdate()
 	{
 		float speed = speedBonusTimer > 0 ? boostedSpeed : normalSpeed;
-		cc.SimpleMove(transform.rotation * (speed * new Vector3(Input.GetAxis("Horizontal-" + inputControllerNumber), 0, Input.GetAxis("Vertical-"+ inputControllerNumber))));
+		var v = speed * new Vector3(
+			Input.GetAxis("Horizontal-" + inputControllerNumber),
+			0,
+			Input.GetAxis("Vertical-" + inputControllerNumber)
+			);
+		cc.SimpleMove(transform.rotation * (v + Physics.gravity * Time.fixedDeltaTime));
 
 		head.transform.localEulerAngles = new Vector3(eulerAngles.x, 0, 0);
 		transform.localEulerAngles = new Vector3(0, eulerAngles.y, 0);
