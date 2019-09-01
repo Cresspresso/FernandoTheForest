@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198132602435635792}
   - component: {fileID: 199234781269225488}
   m_Layer: 0
-  m_Name: Glowing_PowerupVFX
+  m_Name: Glowing_Powerup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
