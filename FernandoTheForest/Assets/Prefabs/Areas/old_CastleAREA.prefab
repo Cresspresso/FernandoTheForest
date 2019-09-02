@@ -102,7 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4616397448601742}
   m_Layer: 0
-  m_Name: CastleAREA
+  m_Name: old_CastleAREA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -424,7 +424,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: fd8e7b87bf46fdf4badb7ebacb4ff56a, type: 2}
+  - {fileID: 2100000, guid: 1884c3d8667d2fd44b58d63f0cb532ca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -459,7 +459,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: fd8e7b87bf46fdf4badb7ebacb4ff56a, type: 2}
+  - {fileID: 2100000, guid: 52dc5e7538d42054da36c57f1a3de062, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -494,7 +494,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: cc38560ef4f9c7f40b64e5dd3e3b98fe, type: 3}
+  - {fileID: 2100000, guid: d50601a7da8bec94e97e9663c9061305, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -529,7 +529,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: cc38560ef4f9c7f40b64e5dd3e3b98fe, type: 3}
+  - {fileID: 2100000, guid: d50601a7da8bec94e97e9663c9061305, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -555,28 +555,28 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1423751482977622}
-  m_Mesh: {fileID: 4300000, guid: 84cb4fea95378ff4896062d3ed92296c, type: 3}
+  m_Mesh: {fileID: 4300000, guid: d6438187d5b212f4f94b370daf37372a, type: 3}
 --- !u!33 &33525779566548236
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1300938170022238}
-  m_Mesh: {fileID: 4300000, guid: cc38560ef4f9c7f40b64e5dd3e3b98fe, type: 3}
+  m_Mesh: {fileID: 4300000, guid: d50601a7da8bec94e97e9663c9061305, type: 3}
 --- !u!33 &33616806406218554
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1766097778143088}
-  m_Mesh: {fileID: 4300000, guid: cc38560ef4f9c7f40b64e5dd3e3b98fe, type: 3}
+  m_Mesh: {fileID: 4300000, guid: d50601a7da8bec94e97e9663c9061305, type: 3}
 --- !u!33 &33938885827693912
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1197654090089920}
-  m_Mesh: {fileID: 4300000, guid: 64cb9623563523c419a0ed370a807af1, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 39e6ccc50c33ab545a5c99a2b22bd627, type: 3}
 --- !u!182 &182254301947290270
 WindZone:
   m_ObjectHideFlags: 1

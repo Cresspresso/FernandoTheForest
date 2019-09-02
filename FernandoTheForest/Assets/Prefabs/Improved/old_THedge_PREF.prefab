@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4823440326644112}
   m_Layer: 0
-  m_Name: THedge_PREF
+  m_Name: old_THedge_PREF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
