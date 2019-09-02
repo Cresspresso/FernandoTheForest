@@ -35,4 +35,4 @@ sysinfo.txt
 *.apk
 *.unitypackage
 FernandoTheForest/Assets/Models/Tree1.obj.meta
-*.meta
+# *.meta
