@@ -162,6 +162,6 @@ public class Player : MonoBehaviour {
 
     public int GetPlayer()
     {
-        return (playerNumber);
+        return playerNumber;
     }
 }

@@ -13,14 +13,5 @@ public class Trophy : Collectable {
 		base.OnHeldBy(player);
 
 		player.points += points;
-
-		m_Game_Loop = GameObject.FindObjectOfType(typeof(Game_Loop)) as Game_Loop;
-		if (gameObject.name == "Trophy")
-		{
-			m_Game_Loop.Trophy();
-			m_Game_Loop.ScoreBoard();
-		}
-		else
-		{ m_Game_Loop.Collectable(); }
 	}
 }

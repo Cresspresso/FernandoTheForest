@@ -542,18 +542,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f655fdb264c5e84fb79be8ee05eb42e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Score_P1: 0
-  Score_P2: 0
-  Score_P3: 0
-  Score_P4: 0
   iPlayer: 0
   TimeBonus: 0
   iTime: 0
   TimeText: {fileID: 114717415463210614}
-  P1Score: {fileID: 114228463616732332}
-  P2Score: {fileID: 114019135625086556}
-  P3Score: {fileID: 114562269475030936}
-  P4Score: {fileID: 114835025469133964}
+  ScoreLabels:
+  - {fileID: 114228463616732332}
+  - {fileID: 114019135625086556}
+  - {fileID: 114562269475030936}
+  - {fileID: 114835025469133964}
 --- !u!114 &114717415463210614
 MonoBehaviour:
   m_ObjectHideFlags: 1
