@@ -14,6 +14,7 @@ public class PlayerSpawner : MonoBehaviour
 		public Transform spawnPoint;
 		public Rect cameraRect = new Rect(0, 0, 0.5f, 0.5f);
 		public Material material;
+		public Animator animationModelPrefab; 
 
 		public Player spawnedPlayer = null;
 	}
@@ -52,6 +53,8 @@ public class PlayerSpawner : MonoBehaviour
 				player.cam.rect = data.cameraRect;
 				player.activeWhenWallHacks.rect = data.cameraRect;
 				player.rend.material = data.material;
+				player.modelAnimator = Instantiate(data.animationModelPrefab, player.transform, true);
+				player.modelAnimator.transform.localPosition = Vector3.up * -2f;
 				data.spawnedPlayer = player;
 			}
 		}

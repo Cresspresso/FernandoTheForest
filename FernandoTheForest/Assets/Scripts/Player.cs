@@ -23,6 +23,7 @@ public class Player : MonoBehaviour {
 	public float wallHacksTimer = 0;
 	public Camera activeWhenWallHacks;
 	public GameObject playerModel;
+	public Animator modelAnimator;
 
 	public float points = 0;
 
