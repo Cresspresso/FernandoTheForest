@@ -8,6 +8,7 @@ public class Game_Loop : MonoBehaviour {
     public int iPlayer = 0;
     public int TimeBonus = 0;
     public float iTime = 1;
+    public int iAct = 1;
 
     public Text TimeText;
     public Text[] ScoreLabels = new Text[4];
@@ -35,7 +36,7 @@ public class Game_Loop : MonoBehaviour {
         }
         else
         {
-            TimeText.text = "0";
+            TimeText.text = string.Format("{0}:{1}", 0, 0);
         }
 
         for (int i = 0; i < 4; i++)
@@ -43,9 +44,17 @@ public class Game_Loop : MonoBehaviour {
             ScoreLabels[i].text = string.Format("Player {0}: {1}", i, m_Players.playerInstances[i].spawnedPlayer.points);
         }
 
-        if ( iTime <= 0 )
+        if (iTime <= 0)
         {
-            Application.Quit();
+            if (iAct == 1)
+            {
+                iTime = 120;
+                iAct = 2;
+            }
+            else
+            {
+                Application.Quit();
+            }
         }
     }
 
@@ -75,5 +84,10 @@ public class Game_Loop : MonoBehaviour {
         }
 
         player.points += TimeBonus;
+    }
+
+    public void cHourglass(int iGlass)
+    {
+        iTime = iTime + iGlass;
     }
 }
