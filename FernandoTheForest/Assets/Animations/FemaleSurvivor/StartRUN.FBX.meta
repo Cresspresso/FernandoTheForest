@@ -59,7 +59,7 @@ ModelImporter:
     400052: //RootNode
     2100000: default
     4300000: Female_MESH
-    7400000: StartRUN
+    7400000: SurvivorSTARTRun
     9500000: //RootNode
     13700000: Female_MESH
   externalObjects: {}
@@ -91,7 +91,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: StartRUN
+      name: SurvivorSTARTRun
       takeName: Take 001
       firstFrame: 105
       lastFrame: 125
