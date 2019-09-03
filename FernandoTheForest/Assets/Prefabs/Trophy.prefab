@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1241989958183390}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -13.48, z: 16.68}
+  m_LocalPosition: {x: 234.35353, y: 3.87, z: 95.19426}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4951749385688458}
@@ -67,8 +67,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1162494040815448}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.2, z: 0}
-  m_LocalScale: {x: 1, y: 0.22072534, z: 1}
+  m_LocalPosition: {x: 0, y: -1.13, z: 0}
+  m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 4007905036084506}
   m_RootOrder: 0
@@ -138,14 +138,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1241989958183390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 750080141f1b20b47965e493a66fc3c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 93818d3810cc2194a817e4b6cd14e6ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNumberMask: 01000000020000000300000004000000
+  playerNumberMask: 01000000
   playerHoldingSelf: {fileID: 0}
   points: 1000
-  m_Game_Loop: {fileID: 0}
-  trophy: {fileID: 0}
 --- !u!135 &135321100772274472
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -156,5 +154,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 1.5
   m_Center: {x: 0, y: 0, z: 0}
