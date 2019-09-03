@@ -20,6 +20,8 @@ public class Game_Loop : MonoBehaviour {
     public Text P3Score;
     public Text P4Score;
 
+    Player m_Player;
+
     // Use this for initialization
     void Start () {
         iTime = 120;
@@ -95,6 +97,8 @@ public class Game_Loop : MonoBehaviour {
 
     public void TimetoPoints ()
     {
+        iPlayer = m_Player.GetPlayer();
+
         if (iTime >= 96)
         {
             TimeBonus = 500;
@@ -136,6 +140,8 @@ public class Game_Loop : MonoBehaviour {
 
     public void Collectable ()
     {
+        iPlayer = m_Player.GetPlayer();
+
         if (iPlayer == 0)
         {
             Score_P1 = Score_P1 + 100;
@@ -155,6 +161,8 @@ public class Game_Loop : MonoBehaviour {
     }
 
     public void Trophy () {
+        //iPlayer = m_Player.GetPlayer();
+
         if (iPlayer == 0)
         {
             Score_P1 = Score_P1 + 500;

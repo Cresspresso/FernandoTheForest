@@ -159,4 +159,9 @@ public class Player : MonoBehaviour {
 		head.transform.localEulerAngles = new Vector3(eulerAngles.x, 0, 0);
 		transform.localEulerAngles = new Vector3(0, eulerAngles.y, 0);
 	}
+
+    public int GetPlayer()
+    {
+        return (playerNumber);
+    }
 }
