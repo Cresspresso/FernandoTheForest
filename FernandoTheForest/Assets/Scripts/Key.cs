@@ -9,7 +9,12 @@ public class Key : Holdable {
 
 	public void OnCollisionEnter(Collision collision)
 	{
-		var door = collision.collider.GetComponentInParent<Door>();
+		OnTriggerEnter(collision.collider);
+	}
+
+	private void OnTriggerEnter(Collider other)
+	{
+		var door = other.GetComponentInParent<Door>();
 		if (door != null && door.keyNumberMask.Contains(keyNumber))
 		{
 			door.Unlock();
