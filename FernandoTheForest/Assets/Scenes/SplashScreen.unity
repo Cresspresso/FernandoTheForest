@@ -428,4 +428,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   splashImage: {fileID: 1489222791}
-  loadLevel: LevelDesign
+  loadLevel: MenuScene
