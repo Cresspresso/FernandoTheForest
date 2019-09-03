@@ -8,7 +8,6 @@ public class Game_Loop : MonoBehaviour {
     public int iPlayer = 0;
     public int TimeBonus = 0;
     public float iTime = 1;
-    public int iAct = 1;
 
     public Text TimeText;
     public Text[] ScoreLabels = new Text[4];
@@ -46,15 +45,7 @@ public class Game_Loop : MonoBehaviour {
 
         if (iTime <= 0)
         {
-            if (iAct == 1)
-            {
-                iTime = 120;
-                iAct = 2;
-            }
-            else
-            {
-                Application.Quit();
-            }
+            Application.Quit();
         }
     }
 
