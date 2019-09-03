@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ac722f7284d06b841b0ddc1f93117cea
+guid: c9e58de76e27b2a4e90112ad9d6a5eac
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -11,7 +11,12 @@ ModelImporter:
     2300000: THedge
     3300000: THedge
     4300000: THedge
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: THedgeMat
+    second: {fileID: 2100000, guid: dbfacb0ae35cc0c4a92e8fde67715f43, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

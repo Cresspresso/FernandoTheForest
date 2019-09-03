@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d6438187d5b212f4f94b370daf37372a
+guid: 84cb4fea95378ff4896062d3ed92296c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -11,7 +11,12 @@ ModelImporter:
     2300000: pCube8
     3300000: pCube8
     4300000: pCube8
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube8Mat
+    second: {fileID: 2100000, guid: fd8e7b87bf46fdf4badb7ebacb4ff56a, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

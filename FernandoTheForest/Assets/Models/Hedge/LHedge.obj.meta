@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1ec8060d837524042be6717be90cdc29
+guid: 2b1f80e023b6579459ac529b9ad210f4
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -11,7 +11,12 @@ ModelImporter:
     2300000: LHedge
     3300000: LHedge
     4300000: LHedge
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LHedgeMat
+    second: {fileID: 2100000, guid: 04eebb27148a27049a7a91a61a27f70e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

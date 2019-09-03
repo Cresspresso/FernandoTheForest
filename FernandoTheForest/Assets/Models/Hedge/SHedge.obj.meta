@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b67b1b01013bb7746bad25dd7642365d
+guid: f2edf1d448a739e4f89d3937e88f667c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -11,7 +11,12 @@ ModelImporter:
     2300000: StraightHedge
     3300000: StraightHedge
     4300000: StraightHedge
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StraightHedgeMat
+    second: {fileID: 2100000, guid: ea002629eea6ab34f90799d1045f0765, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
