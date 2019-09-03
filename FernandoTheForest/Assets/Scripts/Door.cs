@@ -19,8 +19,11 @@ public class Door : MonoBehaviour {
 	public void Unlock()
 	{
 		isLocked = false;
-        m_Game_Loop = GameObject.FindObjectOfType(typeof(Game_Loop)) as Game_Loop;
-        m_Game_Loop.TimetoPoints();
+        var Game_Loop = FindObjectOfType<Game_Loop>();
+        foreach (int playerNumber in keyNumberMask)
+        {
+            Game_Loop.TimetoPoints(playerNumber);
+        }
         UpdateAnim();
 	}
 
