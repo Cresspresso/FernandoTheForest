@@ -40,7 +40,7 @@ public class Game_Loop : MonoBehaviour {
 
         for (int i = 0; i < 4; i++)
         {
-            ScoreLabels[i].text = string.Format("Player {0}: {1}", i, m_Players.playerInstances[i].spawnedPlayer.points);
+            ScoreLabels[i].text = string.Format("{0}", m_Players.playerInstances[i].spawnedPlayer.points);
         }
 
         if (iTime <= 0)
