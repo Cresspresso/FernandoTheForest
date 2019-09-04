@@ -45,18 +45,19 @@ public class PlayerSpawner : MonoBehaviour
 			if (data.spawnedPlayer == null)
 			{
 				var player = Instantiate(prefab, transform, true);
+                data.spawnedPlayer = player;
+                player.transform.position = data.spawnPoint.position;
+				player.transform.rotation = data.spawnPoint.rotation;
 				player.playerNumber = data.playerNumber;
 				player.inputControllerNumber = data.inputControllerNumber;
 				player.name = "Player-" + data.playerNumber;
-				player.transform.position = data.spawnPoint.position;
-				player.transform.rotation = data.spawnPoint.rotation;
-				player.cam.rect = data.cameraRect;
+                player.gameObject.layer = LayerMask.NameToLayer("Player-" + data.playerNumber);
+                player.cam.rect = data.cameraRect;
 				player.activeWhenWallHacks.rect = data.cameraRect;
 				player.rend.material = data.material;
 				player.modelAnimator = Instantiate(data.animationModelPrefab, player.transform, true);
 				player.modelAnimator.transform.localPosition = Vector3.up * -2f;
                 player.modelAnimator.transform.localRotation = Quaternion.identity;
-				data.spawnedPlayer = player;
 			}
 		}
 	}
