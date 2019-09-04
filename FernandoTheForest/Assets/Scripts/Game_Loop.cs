@@ -13,6 +13,7 @@ public class Game_Loop : MonoBehaviour {
 
     public Text TimeText;
     public Text[] ScoreLabels = new Text[4];
+    public GameObject[] SafeIndicators = new GameObject[4];
 
     private PlayerSpawner m_Players;
     public AudioSource S_Music;
@@ -44,15 +45,22 @@ public class Game_Loop : MonoBehaviour {
         for (int i = 0; i < 4; i++)
         {
             ScoreLabels[i].text = string.Format("{0}", m_Players.playerInstances[i].spawnedPlayer.points);
+            SafeIndicators[i].SetActive(m_Players.playerInstances[i].spawnedPlayer.isInEndZone);
         }
 
         if (iTime <= 0)
         {
 			var pers = PersistentScores.instance;
 			var inst = m_Players.playerInstances;
-			var sel = inst.Select(x => x.spawnedPlayer.points);
-			pers.scores = sel.ToArray();
-			if (pers.scores.Length != 4) { Debug.LogError("invalid scores size"); }
+			var sel = inst.Select(x => {
+                var p = x.spawnedPlayer;
+                var stat = new PersistentScores.PlayerData();
+                stat.wasSafe = p.isInEndZone;
+                stat.points = p.points * (stat.wasSafe ? 1.0f : 0.5f);
+                return stat;
+                });
+			pers.stats = sel.ToArray();
+			if (pers.stats.Length != 4) { Debug.LogError("invalid stats size"); }
 			SceneManager.LoadScene("HighScore");
         }
 

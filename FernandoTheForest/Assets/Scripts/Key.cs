@@ -16,7 +16,9 @@ public class Key : Holdable {
 	private void OnTriggerEnter(Collider other)
 	{
 		var door = other.GetComponentInParent<Door>();
-		if (door != null && door.keyNumberMask.Contains(keyNumber))
+		if (door != null
+            && door.isLocked
+            && door.keyNumberMask.Contains(keyNumber))
 		{
 			door.Unlock();
 			Destroy(gameObject);
@@ -25,7 +27,6 @@ public class Key : Holdable {
 
 	public override void OnHeldBy(Player player)
 	{
-
         S_Key.Play(0);
         S_Key.transform.SetParent(null);
         base.OnHeldBy(player);

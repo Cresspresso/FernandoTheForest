@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class PersistentScores : MonoBehaviour {
 
-	public float[] scores = new float[4];
+    [System.Serializable]
+    public struct PlayerData
+    {
+        public float points;
+        public bool wasSafe;
+    }
+
+	public PlayerData[] stats = new PlayerData[4];
 
 	static PersistentScores instance_;
 	public static PersistentScores instance

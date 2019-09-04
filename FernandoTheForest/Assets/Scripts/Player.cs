@@ -10,7 +10,8 @@ public class Player : MonoBehaviour {
 	public float boostedSpeed = 20;
 	public float slowSpeed = 5;
 	public Vector3 eulerAngles = Vector3.zero;
-	public float mouseSensitivity = 10;
+    public Vector3 velocity = Vector3.zero;
+    public float mouseSensitivity = 10;
 	public Holdable keyBeingHeld = null;
 	public Transform holdPos;
 	public Transform head;
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour {
 	public Camera activeWhenWallHacks;
 	public GameObject playerModel;
 	public Animator modelAnimator;
+    public bool isInEndZone = false;
 
 	public float points = 0;
 
@@ -178,11 +180,21 @@ public class Player : MonoBehaviour {
 		{
 			nearbyHoldables.Add(other);
 		}
+
+        if (other.tag == "EndZone")
+        {
+            isInEndZone = true;
+        }
 	}
 
 	private void OnTriggerExit(Collider other)
 	{
 		nearbyHoldables.Remove(other);
+
+        if (other.tag == "EndZone")
+        {
+            isInEndZone = false;
+        }
 	}
 
 	private void FixedUpdate()
@@ -198,8 +210,12 @@ public class Player : MonoBehaviour {
 			0,
 			Input.GetAxis("Vertical-" + inputControllerNumber)
 			);
-
-		cc.SimpleMove(transform.rotation * (v + Physics.gravity * Time.fixedDeltaTime));
+        
+        v = transform.rotation * v;
+        velocity.x = v.x;
+        velocity.z = v.z;
+        velocity += Physics.gravity * Time.fixedDeltaTime;
+        cc.SimpleMove(velocity);
 
 		head.transform.localEulerAngles = new Vector3(eulerAngles.x, 0, 0);
 		transform.localEulerAngles = new Vector3(0, eulerAngles.y, 0);
