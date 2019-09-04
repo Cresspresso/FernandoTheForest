@@ -55,6 +55,7 @@ public class PlayerSpawner : MonoBehaviour
 				player.rend.material = data.material;
 				player.modelAnimator = Instantiate(data.animationModelPrefab, player.transform, true);
 				player.modelAnimator.transform.localPosition = Vector3.up * -2f;
+                player.modelAnimator.transform.localRotation = Quaternion.identity;
 				data.spawnedPlayer = player;
 			}
 		}
