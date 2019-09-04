@@ -6,8 +6,9 @@ using UnityEngine;
 public class Key : Holdable {
 
 	public int keyNumber = 1;
+    public AudioSource S_Key;
 
-	public void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
 	{
 		OnTriggerEnter(collision.collider);
 	}
@@ -24,7 +25,10 @@ public class Key : Holdable {
 
 	public override void OnHeldBy(Player player)
 	{
-		base.OnHeldBy(player);
+
+        S_Key.Play(0);
+        S_Key.transform.SetParent(null);
+        base.OnHeldBy(player);
 		rb.isKinematic = true;
 	}
 

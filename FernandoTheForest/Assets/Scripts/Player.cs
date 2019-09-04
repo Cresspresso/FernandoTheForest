@@ -20,7 +20,10 @@ public class Player : MonoBehaviour {
 	public int inputControllerNumber;
 	public float speedBonusTimer = 0;
 	public ParticleSystem speedEffects;
+	public float slowTimer = 0;
+	public ParticleSystem slowEffects;
 	public float wallHacksTimer = 0;
+	public ParticleSystem[] wallHackEffects = new ParticleSystem[0];
 	public Camera activeWhenWallHacks;
 	public GameObject playerModel;
 	public Animator modelAnimator;
@@ -37,12 +40,32 @@ public class Player : MonoBehaviour {
 		activeWhenWallHacks.cullingMask = LayerMask.GetMask("WallHacks-" + playerNumber);
 
 		speedEffects.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+		slowEffects.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+		foreach (var effects in wallHackEffects)
+		{
+			effects.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+		}
 	}
 
 	public void GiveSpeedBoost(float time)
 	{
 		speedBonusTimer = time;
 		speedEffects.Play(true);
+	}
+
+	public void GiveSlowEffect(float time)
+	{
+		slowTimer = time;
+		slowEffects.Play(true);
+	}
+
+	public void GiveWallHacks(float time)
+	{
+		wallHacksTimer = time;
+		foreach (var effects in wallHackEffects)
+		{
+			effects.Play(true);
+		}
 	}
 
 	private void Update()
@@ -57,12 +80,26 @@ public class Player : MonoBehaviour {
 			}
 		}
 
+		if (slowTimer > 0)
+		{
+			slowTimer -= Time.deltaTime;
+			if (slowTimer < 0)
+			{
+				slowTimer = 0;
+				slowEffects.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+			}
+		}
+
 		if (wallHacksTimer > 0)
 		{
 			wallHacksTimer -= Time.deltaTime;
 			if (wallHacksTimer < 0)
 			{
 				wallHacksTimer = 0;
+				foreach (var effects in wallHackEffects)
+				{
+					effects.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+				}
 			}
 		}
 
