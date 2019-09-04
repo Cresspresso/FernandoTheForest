@@ -13,6 +13,6 @@ public class Flower : Collectable {
         S_Flower.transform.SetParent(null);
 
         base.OnHeldBy(player);
-		player.wallHacksTimer = wallHacksTime;
+		player.GiveWallHacks(wallHacksTime);
 	}
 }
