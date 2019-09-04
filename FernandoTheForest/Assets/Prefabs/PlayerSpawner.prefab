@@ -205,7 +205,7 @@ MonoBehaviour:
       width: 0.5
       height: 0.5
     material: {fileID: 2100000, guid: f345a1eb216e6ab4dac0d9dd9cb79be0, type: 2}
-    animationModelPrefab: {fileID: 95109017259276458, guid: c5543896981a099449bc273495fa902a,
+    animationModelPrefab: {fileID: 95422171872977712, guid: 6e15ffbfbd59d0647bbf90b32d9ba35e,
       type: 2}
     spawnedPlayer: {fileID: 0}
   - playerNumber: 4
@@ -218,6 +218,6 @@ MonoBehaviour:
       width: 0.5
       height: 0.5
     material: {fileID: 2100000, guid: 1285ebf6ff2fe5d46b4d86c5169a7c88, type: 2}
-    animationModelPrefab: {fileID: 95422171872977712, guid: 6e15ffbfbd59d0647bbf90b32d9ba35e,
+    animationModelPrefab: {fileID: 95638887075331124, guid: 280bd69dba5ecce45964cf402da9a190,
       type: 2}
     spawnedPlayer: {fileID: 0}

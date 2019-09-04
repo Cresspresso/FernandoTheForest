@@ -243,7 +243,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.8773585, g: 0.77520037, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -280,7 +280,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.8773585, g: 0.77520037, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -321,6 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 100
   pickupEffects: {fileID: 198350341303881034}
+  rotateSpeed: 100
 --- !u!135 &135618207846123440
 SphereCollider:
   m_ObjectHideFlags: 1
