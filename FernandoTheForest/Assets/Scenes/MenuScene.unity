@@ -287,43 +287,9 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114221595004585120, guid: d41dd63ac1e1e2b4b9ab2450647aeca6,
-        type: 2}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 38572f949c9abd749a0602f3c631ac68,
-        type: 3}
-    - target: {fileID: 114876739462134920, guid: d41dd63ac1e1e2b4b9ab2450647aeca6,
-        type: 2}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 38572f949c9abd749a0602f3c631ac68,
-        type: 3}
-    - target: {fileID: 114539671420540760, guid: d41dd63ac1e1e2b4b9ab2450647aeca6,
-        type: 2}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 38572f949c9abd749a0602f3c631ac68,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d41dd63ac1e1e2b4b9ab2450647aeca6, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1919208266 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1731464989026806, guid: d41dd63ac1e1e2b4b9ab2450647aeca6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1594724916}
---- !u!114 &1919208267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1919208266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b92cdd88204fba4ab34e0c58d99dbb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2019085286
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,8 +318,8 @@ MonoBehaviour:
   m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
+  m_HorizontalAxis: Horizontal-1
+  m_VerticalAxis: Vertical-1
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
