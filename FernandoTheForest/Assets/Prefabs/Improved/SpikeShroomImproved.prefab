@@ -125,8 +125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08592db6db0e0de4a9ca609121ae8f65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNumberMask: 01000000020000000300000004000000
-  playerHoldingSelf: {fileID: 0}
   slowTime: 5
 --- !u!136 &136806539650497928
 CapsuleCollider:
@@ -135,7 +133,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1942716249407068}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 1
   m_Height: 2

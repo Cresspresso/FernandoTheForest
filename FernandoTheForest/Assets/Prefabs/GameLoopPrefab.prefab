@@ -464,8 +464,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 0
+    m_FontSize: 30
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
@@ -475,7 +475,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 123456789
+  m_Text: 12345
 --- !u!114 &114036972173177296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -720,8 +720,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 0
+    m_FontSize: 30
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
@@ -731,7 +731,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 123456789
+  m_Text: 12345
 --- !u!114 &114597287280611544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -753,8 +753,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 0
+    m_FontSize: 30
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
@@ -764,7 +764,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 123456789
+  m_Text: 12345
 --- !u!114 &114615850586826270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -938,8 +938,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 0
+    m_FontSize: 30
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
@@ -949,7 +949,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 123456789
+  m_Text: 12345
 --- !u!114 &114903099216932582
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1203,7 +1203,7 @@ RectTransform:
   m_GameObject: {fileID: 1069328518404652}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 224147853452643620}
   - {fileID: 224452027377928712}
@@ -1213,7 +1213,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 20, y: -20}
-  m_SizeDelta: {x: 140, y: 60}
+  m_SizeDelta: {x: 140, y: 70}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224369121408408708
 RectTransform:
@@ -1369,7 +1369,7 @@ RectTransform:
   m_GameObject: {fileID: 1894836758917520}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1.0000001}
   m_Children:
   - {fileID: 224914365561071448}
   - {fileID: 224632560917256710}
@@ -1379,7 +1379,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -20, y: -20}
-  m_SizeDelta: {x: 140, y: 60}
+  m_SizeDelta: {x: 140, y: 70}
   m_Pivot: {x: 1, y: 1}
 --- !u!224 &224763433116734940
 RectTransform:
@@ -1449,7 +1449,7 @@ RectTransform:
   m_GameObject: {fileID: 1857622131507190}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 224369121408408708}
   - {fileID: 224608990580077560}
@@ -1459,7 +1459,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 20, y: -20}
-  m_SizeDelta: {x: 140, y: 60}
+  m_SizeDelta: {x: 140, y: 70}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224914365561071448
 RectTransform:
@@ -1487,7 +1487,7 @@ RectTransform:
   m_GameObject: {fileID: 1702889394412882}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1.0000001}
   m_Children:
   - {fileID: 224763433116734940}
   - {fileID: 224768751821044892}
@@ -1497,7 +1497,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -20, y: -20}
-  m_SizeDelta: {x: 140, y: 60}
+  m_SizeDelta: {x: 140, y: 70}
   m_Pivot: {x: 1, y: 1}
 --- !u!224 &224992827482708638
 RectTransform:

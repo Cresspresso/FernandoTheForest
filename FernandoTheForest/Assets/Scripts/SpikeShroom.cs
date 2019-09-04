@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpikeShroom : Collectable {
+public class SpikeShroom : TouchCollectable {
 
 	public float slowTime = 5;
 
-	public override void OnHeldBy(Player player)
+	protected override void OnTouched(Player player)
 	{
-		base.OnHeldBy(player);
 		player.GiveSlowEffect(slowTime);
+		base.OnTouched(player);
 	}
 }
