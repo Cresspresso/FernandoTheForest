@@ -35,14 +35,6 @@ public class Game_Loop : MonoBehaviour {
         if (iTime > 0)
         {
             TimeText.text = string.Format("{0}:{1}", minutes, seconds);
-
-            float R = Random.Range(1, 100);
-
-            if (R == 9)
-            { 
-                S_Music.Play(0);
-                S_Music.transform.SetParent(null);
-            }
         }
         else
         {
