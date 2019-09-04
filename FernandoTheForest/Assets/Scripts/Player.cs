@@ -111,11 +111,14 @@ public class Player : MonoBehaviour {
 
 		if (Input.GetKey("escape"))
         { Application.Quit(); };
-		
-		eulerAngles.x = Mathf.Clamp(eulerAngles.x + mouseSensitivity * -Input.GetAxis("Mouse Y-" + inputControllerNumber), -89.9f, 89.9f);
-		eulerAngles.y = Mathf.Repeat(eulerAngles.y + mouseSensitivity * Input.GetAxis("Mouse X-" + inputControllerNumber), 360.0f);
 
-		nearbyHoldables.RemoveAll(x => x == null);
+        float inputMouseY = Input.GetAxis("Mouse Y-" + inputControllerNumber);
+        float inputMouseX = Input.GetAxis("Mouse X-" + inputControllerNumber);
+
+        eulerAngles.x = Mathf.Clamp(eulerAngles.x + mouseSensitivity * -inputMouseY, -89.9f, 89.9f);
+		eulerAngles.y = Mathf.Repeat(eulerAngles.y + mouseSensitivity * inputMouseX, 360.0f);
+
+        nearbyHoldables.RemoveAll(x => x == null);
 
 		if (Input.GetButtonDown("Fire1-" + inputControllerNumber))
 		{
@@ -134,8 +137,14 @@ public class Player : MonoBehaviour {
 					Hold(key);
 				}
 			}
-		}
-	}
+        }
+
+        bool isRunning = new Vector2(
+            Input.GetAxis("Horizontal-" + inputControllerNumber),
+            Input.GetAxis("Vertical-" + inputControllerNumber)
+            ).sqrMagnitude > 0.001f;
+        modelAnimator.SetBool("Running", isRunning);
+    }
 
 	public void Hold(Holdable key)
 	{

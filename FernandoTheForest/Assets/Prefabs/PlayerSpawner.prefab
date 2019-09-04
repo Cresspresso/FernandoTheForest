@@ -226,6 +226,6 @@ MonoBehaviour:
       width: 0.5
       height: 0.5
     material: {fileID: 2100000, guid: 1285ebf6ff2fe5d46b4d86c5169a7c88, type: 2}
-    animationModelPrefab: {fileID: 95638887075331124, guid: 280bd69dba5ecce45964cf402da9a190,
+    animationModelPrefab: {fileID: 95109017259276458, guid: c5543896981a099449bc273495fa902a,
       type: 2}
     spawnedPlayer: {fileID: 0}
