@@ -10,8 +10,8 @@ public class Trophy : Collectable {
     public override void OnHeldBy(Player player)
 	{
         S_Trophy.Play(0);
-        player.points += points;
         S_Trophy.transform.SetParent(null);
+        player.points += points;
 
         base.OnHeldBy(player);
 	}
