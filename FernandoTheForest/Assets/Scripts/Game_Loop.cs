@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class Game_Loop : MonoBehaviour {
     
@@ -54,8 +56,18 @@ public class Game_Loop : MonoBehaviour {
 
         if (iTime <= 0)
         {
-            Application.Quit();
+			var pers = PersistentScores.instance;
+			var inst = m_Players.playerInstances;
+			var sel = inst.Select(x => x.spawnedPlayer.points);
+			pers.scores = sel.ToArray();
+			if (pers.scores.Length != 4) { Debug.LogError("invalid scores size"); }
+			SceneManager.LoadScene("HighScore");
         }
+
+		if (Input.GetKey(KeyCode.Comma))
+		{
+			iTime -= Time.deltaTime * 100;
+		}
 
         //S_Music.Play(0);
         //S_Music.transform.SetParent(null);
