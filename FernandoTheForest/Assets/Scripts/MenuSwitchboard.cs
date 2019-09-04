@@ -7,7 +7,7 @@ public class MenuSwitchboard : MonoBehaviour {
 	
 	public void PlayScene()
 	{
-		SceneManager.LoadScene(1);
+		SceneManager.LoadScene("CharacterSelect");
 	}
 
 	public void Exit()
