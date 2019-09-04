@@ -50,7 +50,7 @@ public class Player : MonoBehaviour {
 		if (speedBonusTimer > 0)
 		{
 			speedBonusTimer -= Time.deltaTime;
-			if (speedBonusTimer <= 0)
+			if (speedBonusTimer < 0)
 			{
 				speedBonusTimer = 0;
 				speedEffects.Stop(true, ParticleSystemStopBehavior.StopEmitting);

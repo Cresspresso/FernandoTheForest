@@ -516,7 +516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec5833a729a22a49aa628609a25ab9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNumberMask: 01000000
+  playerNumberMask: 01000000020000000300000004000000
   playerHoldingSelf: {fileID: 0}
   speedBonusTime: 10
   pickupEffects: {fileID: 198767679805484314}
