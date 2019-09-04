@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelDesign.unity
     guid: e12cee7ec81791c478b02fe0676c79d1
+  - enabled: 1
+    path: Assets/Scenes/HighScore.unity
+    guid: c5c6501bd5b5be64e8af1e565f4759f9
   m_configObjects: {}
