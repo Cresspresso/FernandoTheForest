@@ -13,6 +13,7 @@ public class Game_Loop : MonoBehaviour {
     public Text[] ScoreLabels = new Text[4];
 
     private PlayerSpawner m_Players;
+    public AudioSource S_Music;
 
     // Use this for initialization
     void Start () {
@@ -32,6 +33,14 @@ public class Game_Loop : MonoBehaviour {
         if (iTime > 0)
         {
             TimeText.text = string.Format("{0}:{1}", minutes, seconds);
+
+            float R = Random.Range(1, 100);
+
+            if (R == 9)
+            { 
+                S_Music.Play(0);
+                S_Music.transform.SetParent(null);
+            }
         }
         else
         {
@@ -47,6 +56,9 @@ public class Game_Loop : MonoBehaviour {
         {
             Application.Quit();
         }
+
+        //S_Music.Play(0);
+        //S_Music.transform.SetParent(null);
     }
 
     public void TimetoPoints(int playerNumber)
