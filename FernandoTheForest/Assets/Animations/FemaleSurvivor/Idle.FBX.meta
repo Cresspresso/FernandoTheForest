@@ -59,7 +59,7 @@ ModelImporter:
     400052: //RootNode
     2100000: default
     4300000: Female_MESH
-    7400000: Idle
+    7400000: SurvivorIDLE
     9500000: //RootNode
     13700000: Female_MESH
   externalObjects: {}
@@ -91,7 +91,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle
+      name: SurvivorIDLE
       takeName: Take 001
       firstFrame: 55
       lastFrame: 105
@@ -101,7 +101,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

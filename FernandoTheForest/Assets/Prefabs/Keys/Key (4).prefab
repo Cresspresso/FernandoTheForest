@@ -22,7 +22,8 @@ GameObject:
   - component: {fileID: 65004056975551466}
   - component: {fileID: 54849012900050462}
   - component: {fileID: 114018294539067578}
-  m_Layer: 9
+  - component: {fileID: 65633530577734430}
+  m_Layer: 12
   m_Name: Key (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +56,7 @@ GameObject:
   - component: {fileID: 4140556027611576}
   - component: {fileID: 198719947117490038}
   - component: {fileID: 199244957708885198}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +73,7 @@ GameObject:
   - component: {fileID: 4953272607146694}
   - component: {fileID: 33441462157866418}
   - component: {fileID: 23693438127422728}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: pTorus1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,6 +203,18 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.7, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65633530577734430
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1338930364778190}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!108 &108181027700002384
 Light:
