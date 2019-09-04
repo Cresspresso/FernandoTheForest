@@ -7,8 +7,9 @@ public class CoinTouch : TouchCollectable {
 	public int points = 100;
 	public ParticleSystem pickupEffects;
 	public float rotateSpeed = 100;
+    public AudioSource S_Coin;
 
-	private void Start()
+    private void Start()
 	{
 		pickupEffects.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
 		pickupEffects.gameObject.SetActive(false);
@@ -23,7 +24,10 @@ public class CoinTouch : TouchCollectable {
 	{
 		try
 		{
-			player.points += points;
+            S_Coin.Play(0);
+            S_Coin.transform.SetParent(null);
+
+            player.points += points;
 			pickupEffects.transform.SetParent(transform.parent);
 			pickupEffects.gameObject.SetActive(true);
 		}
