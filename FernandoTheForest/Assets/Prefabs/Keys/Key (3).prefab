@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 65882447511676746}
   - component: {fileID: 54910527582775532}
   - component: {fileID: 114159527632924774}
+  - component: {fileID: 65887714642732496}
   m_Layer: 11
   m_Name: Key (3)
   m_TagString: Untagged
@@ -202,6 +203,18 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.7, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65887714642732496
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1763496058276456}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!108 &108422524048677300
 Light:

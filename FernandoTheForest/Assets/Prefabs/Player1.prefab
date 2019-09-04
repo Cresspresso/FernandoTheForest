@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4906659032176918}
   - component: {fileID: 20722624814681848}
-  - component: {fileID: 81046164642299494}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -114,7 +113,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4189221279151144}
   - component: {fileID: 20596122282219576}
-  - component: {fileID: 81615748604981890}
   m_Layer: 0
   m_Name: Wall Hacks Camera
   m_TagString: Untagged
@@ -164,8 +162,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1602933230795268}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -1.76, z: 0}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalPosition: {x: -0, y: 1.62, z: 0}
+  m_LocalScale: {x: 0.005, y: 0.001, z: 0.005}
   m_Children:
   - {fileID: 4356515041154448}
   m_Father: {fileID: 4246327944882662}
@@ -404,20 +402,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1929518734640654}
   m_Mesh: {fileID: 4300000, guid: e820e91f455a3bd439218c2c300dcef6, type: 3}
---- !u!81 &81046164642299494
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1143256822403296}
-  m_Enabled: 1
---- !u!81 &81615748604981890
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1913311535985012}
-  m_Enabled: 1
 --- !u!114 &114282103326971330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -446,6 +430,7 @@ MonoBehaviour:
   wallHacksTimer: 0
   activeWhenWallHacks: {fileID: 20596122282219576}
   playerModel: {fileID: 1929518734640654}
+  modelAnimator: {fileID: 0}
   points: 0
 --- !u!136 &136859538591270036
 CapsuleCollider:

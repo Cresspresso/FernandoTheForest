@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4187044634933890}
   - component: {fileID: 114406592691461042}
+  - component: {fileID: 81760466632595136}
   m_Layer: 0
   m_Name: PlayerSpawner
   m_TagString: Untagged
@@ -94,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1387187238318008}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: 0, z: 0}
+  m_LocalPosition: {x: 12.86, y: 2.44, z: 79.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4187044634933890}
@@ -107,7 +108,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1042353866402186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -13.48, z: 0}
+  m_LocalPosition: {x: 208.69, y: 2.16, z: 55.120796}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4727513563576222}
@@ -124,7 +125,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1178770547436314}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalPosition: {x: -1.9, y: 3.05, z: 43.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4187044634933890}
@@ -137,7 +138,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1971720652640192}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 0, z: 0}
+  m_LocalPosition: {x: 51.46, y: 2.56, z: 28.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4187044634933890}
@@ -150,12 +151,19 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1484798906572138}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: 72.4, y: 2.58, z: 67.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4187044634933890}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &81760466632595136
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1042353866402186}
+  m_Enabled: 1
 --- !u!114 &114406592691461042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -179,6 +187,8 @@ MonoBehaviour:
       width: 0.5
       height: 0.5
     material: {fileID: 2100000, guid: 24a072f075f8a5048b4e3f0bb8e1fa4f, type: 2}
+    animationModelPrefab: {fileID: 95361796451317604, guid: 5400aa9f199463047a44c657539e3ea6,
+      type: 2}
     spawnedPlayer: {fileID: 0}
   - playerNumber: 2
     inputControllerNumber: 2
@@ -190,6 +200,8 @@ MonoBehaviour:
       width: 0.5
       height: 0.5
     material: {fileID: 2100000, guid: 010a09959680f7245b32004107d5b0f8, type: 2}
+    animationModelPrefab: {fileID: 95672624587033110, guid: 6dd7e485f722c394eb6bc3e5b5b2a51a,
+      type: 2}
     spawnedPlayer: {fileID: 0}
   - playerNumber: 3
     inputControllerNumber: 3
@@ -201,6 +213,8 @@ MonoBehaviour:
       width: 0.5
       height: 0.5
     material: {fileID: 2100000, guid: f345a1eb216e6ab4dac0d9dd9cb79be0, type: 2}
+    animationModelPrefab: {fileID: 95422171872977712, guid: 6e15ffbfbd59d0647bbf90b32d9ba35e,
+      type: 2}
     spawnedPlayer: {fileID: 0}
   - playerNumber: 4
     inputControllerNumber: 4
@@ -212,4 +226,6 @@ MonoBehaviour:
       width: 0.5
       height: 0.5
     material: {fileID: 2100000, guid: 1285ebf6ff2fe5d46b4d86c5169a7c88, type: 2}
+    animationModelPrefab: {fileID: 95638887075331124, guid: 280bd69dba5ecce45964cf402da9a190,
+      type: 2}
     spawnedPlayer: {fileID: 0}

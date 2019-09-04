@@ -23,6 +23,7 @@ public class Player : MonoBehaviour {
 	public float wallHacksTimer = 0;
 	public Camera activeWhenWallHacks;
 	public GameObject playerModel;
+	public Animator modelAnimator;
 
 	public float points = 0;
 
@@ -49,7 +50,7 @@ public class Player : MonoBehaviour {
 		if (speedBonusTimer > 0)
 		{
 			speedBonusTimer -= Time.deltaTime;
-			if (speedBonusTimer <= 0)
+			if (speedBonusTimer < 0)
 			{
 				speedBonusTimer = 0;
 				speedEffects.Stop(true, ParticleSystemStopBehavior.StopEmitting);
