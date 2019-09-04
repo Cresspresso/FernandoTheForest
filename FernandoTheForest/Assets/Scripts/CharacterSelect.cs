@@ -8,6 +8,6 @@ public class CharacterSelect : MonoBehaviour {
 	
 	public void Confirm()
 	{
-		SceneManager.LoadScene("LevelDesign");
+		SceneManager.LoadScene("TutorialUI");
 	}
 }
