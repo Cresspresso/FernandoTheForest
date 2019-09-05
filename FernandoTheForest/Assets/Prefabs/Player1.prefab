@@ -508,7 +508,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalSpeed: 10
   boostedSpeed: 20
+  slowSpeed: 5
   eulerAngles: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
   mouseSensitivity: 2
   keyBeingHeld: {fileID: 0}
   holdPos: {fileID: 4920690975855638}
@@ -529,6 +531,7 @@ MonoBehaviour:
   activeWhenWallHacks: {fileID: 20596122282219576}
   playerModel: {fileID: 1929518734640654}
   modelAnimator: {fileID: 0}
+  isInEndZone: 0
   points: 0
 --- !u!136 &136859538591270036
 CapsuleCollider:
@@ -539,8 +542,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1.5
-  m_Height: 4
+  m_Radius: 2
+  m_Height: 5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!143 &143917875117302066

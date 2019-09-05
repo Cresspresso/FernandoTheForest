@@ -144,6 +144,7 @@ public class Player : MonoBehaviour {
             Input.GetAxis("Vertical-" + inputControllerNumber)
             ).sqrMagnitude > 0.001f;
         modelAnimator.SetBool("Running", isRunning);
+        modelAnimator.SetFloat("RunMult", speedBonusTimer > 0 ? 2.0f : 1.0f);
     }
 
 	public void Hold(Holdable key)
