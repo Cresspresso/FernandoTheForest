@@ -146,7 +146,7 @@ Transform:
   m_GameObject: {fileID: 1103468022174150}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.02, z: 0.5}
   m_Children: []
   m_Father: {fileID: 4966721322629804}
   m_RootOrder: 0
@@ -184,7 +184,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1270439696971040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4428406, y: -13.877, z: 5.4301147}
+  m_LocalPosition: {x: 285.7, y: 4.83, z: 251.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4966721322629804}
@@ -263,7 +263,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1103468022174150}
-  m_Mesh: {fileID: 4300000, guid: f5e3c63f648b92946b1effe3de961515, type: 3}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!82 &82028194616026804
 AudioSource:
   m_ObjectHideFlags: 1

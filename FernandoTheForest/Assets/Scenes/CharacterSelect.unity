@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.24150649, g: 0.21843532, b: 0.16333383, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -312,7 +312,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1895838862876020, guid: 474d5e278019a3c4184da49cfd32460f, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 474d5e278019a3c4184da49cfd32460f, type: 2}
@@ -409,7 +409,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 585069036}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 124.83097, y: -61.05, z: 427.51}
+  m_LocalPosition: {x: 124.83097, y: -70.25, z: 427.51}
   m_LocalScale: {x: 3.8333, y: 3.8333, z: 3.8333}
   m_Children:
   - {fileID: 1293824880}
@@ -565,7 +565,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 202, y: 70}
+  m_AnchoredPosition: {x: 360, y: -100}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &637931628
@@ -677,7 +677,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 370, y: 70}
+  m_AnchoredPosition: {x: 201, y: 69}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &681904683
@@ -808,7 +808,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1107409965383828, guid: 280bd69dba5ecce45964cf402da9a190, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 280bd69dba5ecce45964cf402da9a190, type: 2}
@@ -1014,7 +1014,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 831512614}
   m_LocalRotation: {x: 0.046951987, y: -0.8525984, z: 0.08977845, w: 0.5126514}
-  m_LocalPosition: {x: 129.86, y: -58.12, z: 434.69}
+  m_LocalPosition: {x: 129.86, y: -67.06, z: 434.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1033,7 +1033,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4737733380901250, guid: e004df100ff430a4086a333d1bdf16da, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -61.85
+      value: -71.17
       objectReference: {fileID: 0}
     - target: {fileID: 4737733380901250, guid: e004df100ff430a4086a333d1bdf16da, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1075,7 +1075,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4500144501227570, guid: aad9f879275fde841abe22794689e1da, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -62.307236
+      value: -72.7
       objectReference: {fileID: 0}
     - target: {fileID: 4500144501227570, guid: aad9f879275fde841abe22794689e1da, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1185,7 +1185,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 370, y: -95}
+  m_AnchoredPosition: {x: 202, y: -95}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1079253984
@@ -1715,6 +1715,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1426246765166542, guid: f822db544bee3d04a989dc25a4466de5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f822db544bee3d04a989dc25a4466de5, type: 2}
   m_IsPrefabAsset: 0
@@ -1997,7 +2001,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: character select
+  m_Text: characters
 --- !u!222 &1970662356
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2061,20 +2065,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 38572f949c9abd749a0602f3c631ac68, type: 3}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 7
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'confirm
-
-'
+  m_Text: Continue
 --- !u!222 &2061068191
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2228,7 +2230,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 202, y: -95}
+  m_AnchoredPosition: {x: 365, y: 68}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2122306147

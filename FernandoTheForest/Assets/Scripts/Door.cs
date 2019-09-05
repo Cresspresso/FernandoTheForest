@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Door : MonoBehaviour {
 
+    public float points = 2000;
 	public int[] keyNumberMask = new int[1] { 1 };
 
 	public bool isLocked = true;
@@ -22,10 +23,12 @@ public class Door : MonoBehaviour {
 		isLocked = false;
         S_Door.Play(0);
         S_Door.transform.SetParent(null);
-        var Game_Loop = FindObjectOfType<Game_Loop>();
+        //var Game_Loop = FindObjectOfType<Game_Loop>();
         foreach (int playerNumber in keyNumberMask)
         {
-            Game_Loop.TimetoPoints(playerNumber);
+            FindObjectOfType<PlayerSpawner>().playerInstances[playerNumber - 1].spawnedPlayer
+                .points += points;
+            //Game_Loop.TimetoPoints(playerNumber);
         }
         UpdateAnim();
 	}
